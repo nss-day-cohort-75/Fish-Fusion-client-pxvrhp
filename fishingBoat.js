@@ -10,7 +10,7 @@
         { id: 8, species: "Puffer", weight: 2, price: 9.84, amount: 52 }
     ]
 
-    const boatInventory= () => { 
+    const boatInventory = () => { 
     return fishInventory;}
 
 
