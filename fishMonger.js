@@ -4,14 +4,16 @@ const mongerInventory = () => {
 const catchOfTheDay = boatInventory();
 let Inventory = [];
 for ( let i = 0; i < catchOfTheDay.length; i++) {
-    const fish = (catchOfTheDay[i])
+    const fish  = (catchOfTheDay[i])
     if( fish.price <= 7.50 && fish.amount >= 10) {
-        Inventory.push({id: fish.id,
-            species: fish.species,
-            weight: fish.weight,
-            price: fish.price,
-            amount: fish.amount
-        })
+        Inventory.push(
+            {
+                id: fish.id,
+                species: fish.species,
+                weight: fish.weight,
+                price: fish.price,
+                amount: fish.amount
+            })
     }
 }
     return Inventory

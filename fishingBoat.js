@@ -13,6 +13,5 @@
     const boatInventory= () => { 
     return fishInventory;}
 
-    //for (fish of fishInventory) => {boatInventory.append, ...fishInventory}
 
     module.exports = {boatInventory};
