@@ -17,11 +17,38 @@ for ( let i = 0; i < catchOfTheDay.length; i++) {
     }
 }
     return Inventory
-//filter catch to include only fix that meet the max (price <= $7.50 and quantity >= 10)
 }
-const test = mongerInventory();
 
- console.log(test)
+const chefConstraint = () => {
+    let inventory = mongerInventory();
+    let chefInventory = [];
+
+    for (let i = 0; i < inventory.length; i++) {
+        let fish = inventory[i];
+        if (fish.price <= 5.00) {
+            // Modify the amount directly for fish that meet the price constraint
+            chefInventory.push({
+                id: fish.id,
+                species: fish.species,
+                weight: fish.weight,
+                price: fish.price,
+                amount: Math.floor(fish.amount / 2) // Halve the amount
+            })
+        }
+    }
+    return chefInventory
+}       
+
+
+
+
+module.exports = { chefConstraint }; 
+ 
+ 
+ 
+ 
+ 
+ 
  /* defining fishmonger needs to buy 10 fish
 they can't use boats with less then 10 fish total
 dont buy fish priced higher than 7.50
